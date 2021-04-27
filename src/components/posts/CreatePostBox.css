@@ -1,0 +1,26 @@
+.create-post__body .text-box {
+  min-height: 100px;
+  max-height: 250px;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.create-post__header {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.create-post__footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.create-post__footer .icon {
+  transition: color 0.1s;
+  margin: 0;
+}
+
+.create-post__footer .icon:hover {
+  color: var(--color-primary);
+}

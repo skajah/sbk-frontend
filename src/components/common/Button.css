@@ -1,0 +1,71 @@
+.btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.btn--corner {
+  border-radius: 0;
+}
+
+.btn--block {
+  display: inline-block;
+  width: 100%;
+}
+
+.btn--rounded {
+  border-radius: 30px;
+}
+
+.btn--outline {
+  background: transparent;
+  border: 1px solid rgb(14, 8, 95);
+  transition: background-color 0.05s;
+}
+
+.btn--outline:hover {
+  background: rgb(14, 8, 95);
+  color: whitesmoke;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: whitesmoke;
+}
+
+.btn--primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: whitesmoke;
+}
+
+.btn--secondary:hover {
+  background: var(--secondary-hover);
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: whitesmoke;
+}
+
+.btn--accent:hover {
+  background: var(--accent-hover);
+}
+
+.btn--small {
+  padding: 0.75rem 1.25rem;
+}
+
+.btn--medium {
+  font-size: 2rem;
+}
+.btn--large {
+  font-size: 2.4rem;
+}

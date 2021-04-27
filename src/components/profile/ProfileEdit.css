@@ -1,0 +1,62 @@
+.profile-edit__header {
+  font-size: 2rem;
+}
+
+.profile-edit-page div:not(:first-child) {
+  display: grid;
+  grid-template-columns: 4fr 8fr 2fr;
+  align-items: center;
+}
+
+.edit-row .icon {
+  justify-self: center;
+  transition: transform 0.3s;
+}
+
+.edit-row:not(.profile-edit__photo):hover .icon {
+  transform: translateX(5px) scale(1.2);
+}
+
+.edit-row.profile-edit__photo .icon {
+  transition: transform 0.3s;
+}
+
+.edit-row.profile-edit__photo:hover .icon {
+  transform: scale(1.1);
+}
+
+.profile-edit-page div {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+}
+
+.profile-edit-page .file-chooser,
+.profile-edit-page .file-chooser div {
+  padding: 0;
+}
+
+.profile-edit-page .file-chooser div {
+  padding-left: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.profile-edit-page div:not(:last-child) {
+  border-bottom: 1px lightgray solid;
+}
+
+.profile-edit-page .file-chooser div {
+  grid-column: 1 / span 3;
+}
+
+.profile-edit__username .edit-row__text,
+.profile-edit__email .edit-row__text,
+.profile-edit__description .edit-row__text {
+  margin-left: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+}

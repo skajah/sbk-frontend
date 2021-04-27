@@ -1,0 +1,23 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown__content {
+  display: none;
+  z-index: 100;
+  position: absolute;
+  right: 5px;
+  border: 0.5px solid gray;
+}
+
+.dropdown__content .btn {
+  transition: background-color 0.2s;
+}
+.dropdown__content .btn:hover {
+  background: rgb(225, 225, 225);
+}
+
+.show {
+  display: block;
+}

@@ -1,0 +1,36 @@
+.form {
+  padding: 10px;
+  width: 300px;
+}
+
+.form .label,
+.form .text-box {
+  display: block;
+}
+
+.form__group {
+  margin-bottom: 2rem;
+}
+
+.form__group .icon {
+  transition: color 0.1s;
+}
+
+.form__group .icon:hover {
+  color: var(--color-accent);
+}
+
+.label {
+  margin-bottom: 10px;
+}
+
+.form h2 {
+  text-align: center;
+}
+
+.form .text-box:is(textarea) {
+  resize: vertical;
+  min-height: 100px;
+  height: 100px;
+  max-height: 250px;
+}
