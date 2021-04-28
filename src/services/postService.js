@@ -9,7 +9,9 @@ export function getPosts({ filter, filterData, maxDate, limit = loadLimit }) {
   return http.get(
     `${postApiEndpoint}?filter=${
       filter || ''
-    }&filterData=${filterData}&maxDate=${maxDate || ''}&limit=${limit}`
+    }&filterData=${filterData}&maxDate=${
+      maxDate || ''
+    }&limit=${limit}&now=${new Date()}`
   );
 }
 

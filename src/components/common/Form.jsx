@@ -18,6 +18,7 @@ class Form extends Component {
         return (
             <Button
             styles={['rounded', 'block']}
+            size="medium"
             color="primary">
                 {label}
             </Button>

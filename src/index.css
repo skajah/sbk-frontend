@@ -2,8 +2,8 @@
 
 :root {
   --color-primary: rgba(128, 0, 0, 0.8);
-  --color-secondary: rgba(168, 70, 70, 0.9);
-  --secondary-hover: rgb(168, 70, 70);
+  --color-secondary: #a84646;
+  --secondary-hover: rgb(153, 63, 63);
   --color-accent: rgb(26, 170, 170, 0.9);
   --accent-hover: rgb(26, 170, 170);
   --primary-hover: rgba(128, 0, 0, 0.9);
@@ -29,24 +29,8 @@ body {
   color: rgb(34, 39, 63);
 }
 
-nav {
-  height: var(--nav-height);
-}
-
 main {
   min-height: 100vh;
-}
-
-/* Lists */
-
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.list-inline {
-  display: flex;
 }
 
 /* Post/Comment/Profile */
@@ -56,13 +40,15 @@ main {
   margin-top: 20px;
 }
 
+.post__body,
+.comment__body {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
 .post__body p,
 .comment__body p {
-  white-space: pre-wrap;
-  overflow-wrap: break-word;
-  margin: 10px 0 0;
-  max-height: 150px;
-  overflow-y: auto;
+  white-space: pre;
 }
 
 .post .media {
@@ -223,7 +209,7 @@ input[type='date']:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: calc(var(--nav-height) * 2) 3rem;
+  padding-top: 3rem;
 }
 
 .page-form {

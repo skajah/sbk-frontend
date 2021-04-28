@@ -1,37 +1,104 @@
-.navbar {
-  position: fixed;
+.nav {
+  background: var(--color-secondary);
+  height: var(--nav-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  height: var(--nav-height);
+  z-index: 20;
   top: 0;
-  z-index: 100;
-  width: 100%;
+}
+
+.nav__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--secondary-hover);
+  width: 100%;
+  height: var(--nav-height);
+}
+
+.nav__brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: whitesmoke;
+  margin-left: 3rem;
+}
+
+.nav__logo {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.nav__link {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
   color: whitesmoke;
 }
 
-.navbar__brand {
-  padding: 10px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.navbar .icon {
-  margin-right: 5px;
+.nav__menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
 }
 
 .nav__item {
-  transition: background-color 0.1s;
+  padding: 1rem 2rem;
+  line-height: 30px;
+  transition: all 0.3s ease;
 }
 
-.nav__item:hover {
+.nav__item::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: transparent;
+  transition: all 0.3s ease-in;
+}
+
+.nav__item:hover::after {
+  width: 100%;
   background: whitesmoke;
-  color: var(--color-primary);
 }
 
-.nav__item {
-  padding: 1.5rem 2rem;
+.nav__item .active {
+  color: whitesmoke;
+  border: 1.5px solid whitesmoke;
+}
+
+.nav__menu-icon {
+  color: whitesmoke;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: var(--nav-height);
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: -110%;
+    transition: all 0.5s ease;
+  }
+
+  .nav__menu.active {
+    background: var(--color-secondary);
+    left: 0;
+  }
+  .nav__menu-icon {
+    display: block;
+  }
+
+  .nav__link {
+    width: 100%;
+    display: table;
+  }
 }
