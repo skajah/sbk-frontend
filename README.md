@@ -1,1 +1,1 @@
-# sbk-frontend
+# Use "master" branch
