@@ -1,4 +1,4 @@
 node_modules/
 problems.txt
-.DS_Store
+*/.DS_Store
 
